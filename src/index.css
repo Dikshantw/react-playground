@@ -1,0 +1,16 @@
+@import "tailwindcss";
+* {
+    margin: 0;
+    padding: 0;
+    background: #151515;
+}
+
+button {
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    background-color: transparent;
+}
+.cm-gutters {
+    font-size: 24px;
+}
