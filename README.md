@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+# React Code Playground
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive in-browser React code editor powered by [Sandpack](https://sandpack.codesandbox.io/), featuring real-time preview, draggable layout, Tailwind CSS integration, and animated visuals using `motion`.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ **React + TypeScript** out of the box
+- 🎨 **Tailwind CSS** styling via CDN
+- 🎞️ **Animation** using `motion`
+- 📦 **Live code editing** with preview
+- 📐 **Resizable layout** (drag the vertical divider)
+- 🧼 **Code formatting** (via integrated button)
+- 🌙 **Dark mode** styling support
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+src/
+├── App.tsx              # Main React component with animated background
+├── ActiveFileDisplay.tsx # Displays current file name in editor
+├── FormatButton.tsx     # Formats code inside the editor
+├── index.html           # HTML entry point
+├── main.tsx             # React entry point
+└── style.css            # Optional custom styling
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧪 Technologies Used
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Sandpack React](https://sandpack.codesandbox.io/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🚀 Getting Started
+
+1. **Clone this repository**:
+
+   ```bash
+   git clone https://github.com/Dikshantw/react-playground.git
+   cd react-code-playground
+   ```
+
+2. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser at [http://localhost:3000](http://localhost:3000)
+
+## 🛠 Customization
+
+- Add new files to the `files` object in the Sandpack provider.
+- Modify the default code inside `App.tsx`.
+- Extend the editor with additional Sandpack features (e.g., file tabs, terminal).
+
+## 🧼 Formatting
+
+Click the **Format** button in the editor toolbar to automatically format the current file.
